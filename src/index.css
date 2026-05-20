@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-900 text-parchment-100 font-serif antialiased;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(184, 115, 51, 0.10) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(112, 66, 20, 0.15) 0%, transparent 50%),
+      linear-gradient(180deg, #1a0f0a 0%, #2a1810 50%, #1a0f0a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-wide;
+  }
+}
+
+@layer components {
+  .brass-border {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #d4a574, #b87333, #7d441c, #b87333, #d4a574) 1;
+  }
+
+  .ornate-divider {
+    background: linear-gradient(90deg, transparent 0%, #b87333 20%, #d4a574 50%, #b87333 80%, transparent 100%);
+    height: 1px;
+  }
+
+  .btn-brass {
+    @apply relative inline-flex items-center gap-2 px-7 py-3 font-display tracking-widest uppercase text-sm transition-all duration-300;
+    background: linear-gradient(135deg, #b87333 0%, #d4a574 50%, #b87333 100%);
+    color: #1a0f0a;
+    border: 1px solid #7d441c;
+    box-shadow: 0 4px 14px rgba(184, 115, 51, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+
+  .btn-brass:hover {
+    background: linear-gradient(135deg, #d4a574 0%, #f0d4a0 50%, #d4a574 100%);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.55), inset 0 1px 0 rgba(255,255,255,0.35);
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-6 py-3 font-display tracking-widest uppercase text-sm transition-all duration-300 text-parchment-200 border border-brass-400/40 hover:border-brass-300 hover:text-brass-300 hover:bg-brass-900/30;
+  }
+
+  .card-vintage {
+    @apply relative overflow-hidden rounded-sm bg-ink-800/80 backdrop-blur-sm;
+    border: 1px solid rgba(212, 165, 116, 0.25);
+    box-shadow:
+      0 10px 40px rgba(0,0,0,0.5),
+      inset 0 0 0 1px rgba(212, 165, 116, 0.08);
+  }
+
+  .card-vintage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(212, 165, 116, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(184, 115, 51, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .parchment-bg {
+    background: linear-gradient(135deg, #f4e8c1 0%, #e8d4a0 50%, #f4e8c1 100%);
+    color: #3e2c23;
+    box-shadow: inset 0 0 60px rgba(112, 66, 20, 0.15);
+  }
+
+  .gear-icon {
+    filter: drop-shadow(0 0 8px rgba(212, 165, 116, 0.4));
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #f0d4a0 0%, #d4a574 50%, #b87333 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a0f0a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #b87333, #7d441c);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d4a574, #b87333);
+}
+
+/* Selection */
+::selection {
+  background: rgba(212, 165, 116, 0.4);
+  color: #fdf8f0;
+}
