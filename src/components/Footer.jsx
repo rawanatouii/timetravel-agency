@@ -59,10 +59,10 @@ export default function Footer() {
           </p>
           <p className="font-serif italic text-sm text-parchment-200/60">
             Réalisé par{' '}
-            <span className="text-brass-300">[Membre 1]</span>,{' '}
-            <span className="text-brass-300">[Membre 2]</span>,{' '}
-            <span className="text-brass-300">[Membre 3]</span>,{' '}
-            <span className="text-brass-300">[Membre 4]</span>
+            <span className="text-brass-300">Rawan ATWE</span>,{' '}
+            <span className="text-brass-300">Douglas QUASHIE</span>,{' '}
+            <span className="text-brass-300">Jonathan DAH</span>,{' '}
+            <span className="text-brass-300">Anthony CAVAGNE</span>
           </p>
         </div>
       </div>

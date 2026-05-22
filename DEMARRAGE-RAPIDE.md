@@ -1,6 +1,6 @@
 # Démarrage rapide — 5 minutes
 
-> Pour les 4 membres du groupe — guide express pour faire tourner le projet localement et le déployer.
+> guide express pour faire tourner le projet localement et le déployer.
 
 ## Étape 1 — Installer Node.js (si pas déjà fait)
 
